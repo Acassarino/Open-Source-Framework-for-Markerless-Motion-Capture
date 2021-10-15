@@ -150,7 +150,7 @@ def TimeSync(session,timeStampData,numCamRange,camNames):
     #print(postSyncTotalNumFrames, 'post-sync')
     assert postSyncTotalNumFrames.count(postSyncTotalNumFrames[0]) == len(postSyncTotalNumFrames), "Number of frames sliced for each camera post-syncing is not the same"
 
-    session.postSyncNumFrames = postSyncTotalNumFrames[0]
+    #session.postSyncNumFrames = postSyncTotalNumFrames[0]
 
     #create our data frame for both times and frames    
     frameTable = pd.DataFrame(frameList)   
@@ -274,3 +274,7 @@ def time_sync_initialize(session):
     session.numCamRange = numCamRange
     session.vidNames = vidNames
     session.numCams = numCams
+
+
+
+
